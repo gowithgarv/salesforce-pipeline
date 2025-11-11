@@ -4,3 +4,11 @@ services:
     image: nginx
     ports:
       - "8080:80"
+  salesforce-db:
+    image: postgres:14
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: pass
+      POSTGRES_DB: salesdb
+    ports:
+      - "5432:5432"
